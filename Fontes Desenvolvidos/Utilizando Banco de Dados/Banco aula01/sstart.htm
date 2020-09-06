@@ -1,0 +1,63 @@
+<!-- WebSpeed Evaluation test utility page.   -->
+<HTML>
+<HEAD>
+<TITLE>WebSpeed SpeedStart</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFCC" TEXT="#000000" LINK="#660066" VLINK="#990000">
+
+<H1>WebSpeed SpeedStart</H1></FONT></FONT></B></DT></CENTER>
+
+<DT>
+<HR></DT>
+
+<P>For WebSpeed to run successfully, both your Web Server and the WebSpeed components need to be configured properly. Visit  the <a href="http://developer.webspeed.com">WebSpeed Developer's Corner</a> to access online versions of the WebSpeed Documentation and other detailed information.</P>
+<H3>Starting WebSpeed Workshop</H3>
+<DT><OL><li>Before processing, please make sure your Web server is running.  The Web server will need to be restarted if the product was just installed and a virtual directory was created.</li><li>WebSpeed Workshop consists of the AppBuilder development tool and the WebSpeed Transaction Server.</li><li>Start the WebSpeed Transaction Server by using the Progress Explorer Tool (Windows), or the wtbman command line utility.</li><li>To start the browser-based WebTools, you can enter the following URL <I>(e.g. <font color="#FF0000">http://host-name/scripts/WebSpeed-Messenger/workshop)</font></I> Or select Tools ... WebTools from AppBuilder.</li><li>To access WebSpeed sample applications, see <em>OpenEdge Getting  Started: WebSpeed</em>.</li></OL><HR></DT>
+<P>If you are having trouble running WebSpeed:</P><BR><H3>Verify WebSpeed Configuration</H3>
+<P>The following sample URL's demonstrate how to validate your WebSpeed configuration by testing the various components. Each link will return a page to validate the configuration of a WebSpeed component <I>(e.g. Messenger)</I> and the ability to use the configuration data to connect to the next component. Just substitute <I>host-name</I>, <I>scripts</I> and <I>SampleSrvc</I> with your system's values.</P><P><b>NOTE:</b>  Before you can run any administration utilities, you must enable internal administration commands on the WebSpeed Messenger. You can do this through Progress Explorer in the <b>Advanced Features</b> section of the Messenger's Properties dialog box. Select the <b>Internal Adminstration Commands</b> check box.</P><P>Optionally, it is possible to validate your configuration through the <I>Messenger Administration</I> page. This can be accessed by specifying <I>?WSMAdmin</I> after the <I>Messenger</I> name, <I>e.g. <font color="#FF0000">http://host-name/scripts/WebSpeed-Messenger?WSMAdmin</font></I></P>
+<!-- CGI Messenger tests  -->
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/cgiip.exe?VerifyConfig&Level=1</font></I> <B><font color="#660066">CGI Messenger: Msngr-NameServer Verify</font></TT></B><BR>
+Round trip test from a Browser to the CGI Messenger (cgiip.exe). This test will retrieve configuration information from the Messenger for the Controlling NameServer. A connection will be attempted to retrieve the registered Broker list.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/cgiip.exe?VerifyConfig&Level=2</font></I> <B><font color="#660066">CGI Messenger: Broker Verify</font></TT></B><BR>
+Round trip test from a Browser to the WebSpeed Broker using the CGI Messenger (cgiip.exe). This test instructs the Messenger to make a connection to the Broker and report the results.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/cgiip.exe/ping</font></I> <B><font color="#660066">CGI Messenger: Agent and Workshop Verify</font></TT></B><BR>
+Round trip test from a Browser to a WebSpeed Agent and WebTools using the CGI Messenger (cgiip.exe). This test instructs the Messenger to make a connection to the Broker and an available Agent. The Agent then runs a Workshop "ping" utility and reports back Agent information.
+<P>
+
+<!-- ISAPI Messenger tests  -->
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/wsisa.dll?VerifyConfig&Level=1</font></I> <B><font color="#660066">ISAPI Messenger: Msngr-NameServer Verify</font></TT></B><BR>
+Round trip test from a Browser to the ISAPI Messenger (wsisa.dll). This test will retrieve configuration information from the Messenger for the Controlling NameServer. A connection will be attempted to retrieve the registered Broker list.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/wsisa.dll?VerifyConfig&Level=2</font></I> <B><font color="#660066">ISAPI Messenger: Broker Verify</font></TT></B><BR>
+Round trip test from a Browser to the WebSpeed Broker using the ISAPI Messenger (wsisa.dll). This test instructs the Messenger to make a connection to the Broker and report the results.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/scripts/wsisa.dll/ping</font></I> <B><font color="#660066">ISAPI Messenger: Agent and Workshop Verify</font></TT></B><BR>
+Round trip test from a Browser to a WebSpeed Agent and WebTools using the ISAPI Messenger (wsisa.dll). This test instructs the Messenger to make a connection to the Broker and an available Agent. The Agent then runs a Workshop "ping" utility and reports back Agent information.
+<P>
+
+<!-- NSAPI Messenger tests  -->
+
+<TT> <I><font color="#FF0000">http://host-name/wsnsa.dll?VerifyConfig&Level=1</font></I> <B><font color="#660066">NSAPI Messenger: Msngr-NameServer Verify</font></TT></B><BR>
+Round trip test from a Browser to the NSAPI Messenger (wsnsa.dll). This test will retrieve configuration information from the Messenger for the Controlling NameServer. A connection will be attempted to retrieve the registered Broker list.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/wsnsa.dll?VerifyConfig&Level=2</font></I> <B><font color="#660066">NSAPI Messenger: Broker Verify</font></TT></B><BR>
+Round trip test from a Browser to the WebSpeed Broker using the NSAPI Messenger (wsnsa.dll). This test instructs the Messenger to make a connection to the Broker and report the results.
+<P>
+
+<TT> <I><font color="#FF0000">http://host-name/wsnsa.dll/ping</font></I> <B><font color="#660066">NSAPI Messenger: Agent and Workshop Verify</font></TT></B><BR>
+Round trip test from a Browser to a WebSpeed Agent and WebTools using the NSAPI Messenger (wsnsa.dll). This test instructs the Messenger to make a connection to the Broker and an available Agent. The Agent then runs a Workshop "ping" utility and reports back Agent information.
+<P>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,962 @@
+<html>
+<head>
+<title>Simulado Progress</title>
+
+<script>
+function darNota() {
+var numquestoes = 60;
+
+var certas = 0;
+
+
+var erros = "";
+
+for (i = 1; i <= numquestoes; i++) {
+corretas = certas;
+
+valor = respostas[i-1];
+
+eval("if (document.simulado.q" + i + "[0] != null && document.simulado.q" + i + "[0].checked && document.simulado.q" + i + "[0].value == valor) certas++");
+eval("if (document.simulado.q" + i + "[1] != null && document.simulado.q" + i + "[1].checked && document.simulado.q" + i + "[1].value == valor) certas++");
+eval("if (document.simulado.q" + i + "[2] != null && document.simulado.q" + i + "[2].checked && document.simulado.q" + i + "[2].value == valor) certas++");
+eval("if (document.simulado.q" + i + "[3] != null && document.simulado.q" + i + "[3].checked && document.simulado.q" + i + "[3].value == valor) certas++");
+eval("if (document.simulado.q" + i + "[4] != null && document.simulado.q" + i + "[4].checked && document.simulado.q" + i + "[4].value == valor) certas++");
+
+if (corretas == certas) {
+var erros = erros + "\r\n" + i;
+}
+
+}
+
+pcetage = ((certas * 100) / numquestoes);
+
+document.getElementById("nota").innerHTML = "<img src=\"http://chart.apis.google.com/chart?cht=p3&chd=t:"+pcetage+","+(100 - pcetage)+"&chs=250x100&chl=Acertos|Erros\">";
+
+
+
+if (pcetage < 80) {
+alert("Estude mais.. Você foi reprovado! Acertou apenas " + pcetage + "%.\r\n\r\nLista de questões para revisão: " + erros);
+} else if (pcetage == 100) {
+alert("Parabéns! Você gabaritou o teste. 100% - Aprovado.");
+} else {
+alert("Parabéns, você foi aprovado.\r\nSua nota: " + ((certas * 100) / numquestoes) + "%.\r\n\r\nLista de questões para revisão: " + erros);
+}
+
+
+} 
+
+</script>
+</head>
+<body>
+
+<form name="simulado">
+<table>
+
+<tr><td><center><h2><div id="titulo">Questões baseadas no conteúdo do curso de DCA.<br>É necessário 80% de acertos para a aprovação.</div></h2><br></center></td></tr>
+<tr><td><hr><b>1 -  No código abaixo temos uma transação em:</td></tr>
+<tr><td><br><i>
+DEFINE VARIABLE i-cont AS INTEGER NO-UNDO.<br>
+ASSIGN i-cont = 1.<br>
+DO:<br>
+    FINF order EXCLUSIVE-LOCK.<br>
+           DISPLAY order.<br>
+END.<br><br></i>
+</td></tr>
+<tr>
+<td>
+
+<input type="radio" name="q1" value="a">No bloco "DO"</input><br>
+<input type="radio" name="q1" value="d">Não existe transação neste programa</input><br>
+<input type="radio" name="q1" value="b">No escopo do FIND com EXCLUSIVE-LOCK</input><br>
+<input type="radio" name="q1" value="c">O programa todo é uma transação</input><br>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>2 - Quais são os parâmetros para se conectar remotamente em uma base progress:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q2" value="d">-d -N</input><br>
+<input type="radio" name="q2" value="a">–1 –d –E</input><br>
+<input type="radio" name="q2" value="c">–H –N</input><br>
+<input type="radio" name="q2" value="b">–H –S –N</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>3 - Quanto a procedures é incorreto afirmar:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q3" value="b">Procedures não podem passar ou receber prâmetros</input><br>
+<input type="radio" name="q3" value="c">Para rodar uma procedure basta digitar Run <nome da procedure></input><br>
+<input type="radio" name="q3" value="a">Uma procedure interna é declarada dentro do próprio programa</input><br>
+<input type="radio" name="q3" value="d">Para rodar uma procedure em um programa persistente basta usar o comando Run <nome da procedure> <variável handle do programa></input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>4 - Como é finalizado um programa persistente:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q4" value="a">Run delete in handle [var handle]</input><br>
+<input type="radio" name="q4" value="d">Delete [var handle]</input><br>
+<input type="radio" name="q4" value="c">Delete procedure [var handle]</input><br>
+<input type="radio" name="q4" value="b">Delete [nome do programa]</input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>5 - Que valor um campo mandatorio caracter não pode assumir:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q5" value="b">""</input><br>
+<input type="radio" name="q5" value="c">"?"</input><br>
+<input type="radio" name="q5" value="a">?</input><br>
+<input type="radio" name="q5" value="d">" "</input>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>6 - Quanto as afirmações abaixo é incorreto:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q6" value="c">CHOOSE -> relacionado a botão</input><br>
+<input type="radio" name="q6" value="a">ENTRY -> quando o campo recebe o foco</input><br>
+<input type="radio" name="q6" value="b">LEAVE -> quando o campo recebe o foco</input><br>
+<input type="radio" name="q6" value="d">VALUE-CHANGE -> alteração browse</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>7 – Observe o código abaixo e responda a alternativa correta:</td></tr>
+<tr><td><br><i>
+procedure cria-temp-table.<br>
+   Def temp-table tt-cli like customer<br>
+          Field cod as integer<br>
+          Field nome as char.<br>
+End procedure.<br><br></i>
+</td></tr>
+<tr>
+<td>
+
+<input type="radio" name="q7" value="b">O código não compila</input><br>
+<input type="radio" name="q7" value="d">Por estar definido com like não podemos incluir novos campos</input><br>
+<input type="radio" name="q7" value="c">Os campos definidos substituirão os campos da tabela customer</input><br>
+<input type="radio" name="q7" value="a">A temp-table que está sendo criada não terá índice</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>8 - Qual desses comandos é semelhante ao comando “PUT”:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q8" value="b">Display</input><br>
+<input type="radio" name="q8" value="a">Output</input><br>
+<input type="radio" name="q8" value="d">Enable</input><br>
+<input type="radio" name="q8" value="c">View</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>9 - Porque o  RECID não pode ser usado como chave para a tabela:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q9" value="a">Por possuir baixa performance</input><br>
+<input type="radio" name="q9" value="c">Por existir o ROWID que é muito mais rápido</input><br>
+<input type="radio" name="q9" value="b">Por mudar de numeração após um dump/load</input><br>
+<input type="radio" name="q9" value="d">Cinco patinhos foram passear...</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>10 - Qual conjunto de comandos geram frames:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q10" value="c">find, display, prompt-for, view</input><br>
+<input type="radio" name="q10" value="b">display, prompt-for, enable, update</input><br>
+<input type="radio" name="q10" value="a">view, update, display, prompt-for</input><br>
+<input type="radio" name="q10" value="d">view, assign, display, update</input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>11 – De acordo com o seguinte código, o que vai acontecer quando executar o programa:</td></tr>
+<tr><td><br><i>
+find first order no-lock.<br>
+Update order.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q11" value="b">Gerar um erro de no-lock após apertar o ENTER com um registro</input><br>
+<input type="radio" name="q11" value="d">O programa não compila</input><br>
+<input type="radio" name="q11" value="a">Gerar um erro de no-lock ao informar o registro</input><br>
+<input type="radio" name="q11" value="c">O registro será gravado normalmente na tabela</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>12 – Baseando-se neste exemplo apresentado na tela, complete o espaço pontilhado com o comando que foi utilizado para que a saída fosse desta maneira no código:</td></tr>
+<tr><td><br><i>
+find first customer. Disp customer.cust-num customer.name with  .........<br><br>
+Cust-num: 012<br>
+Name: Taylor<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q12" value="a">column-label</input><br>
+<input type="radio" name="q12" value="d">label</input><br>
+<input type="radio" name="q12" value="c">no-label</input><br>
+<input type="radio" name="q12" value="b">side-labels</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>13 - Em um evento temos a seguinte condição, que comando preenche os pontilhados para desabilitar a ação padrão do evento:</td></tr>
+<tr><td><br><i>
+if i-cont = 10<br>
+    return ……<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q13" value="a">leave</input><br>
+<input type="radio" name="q13" value="d">error</input><br>
+<input type="radio" name="q13" value="b">no-apply</input><br>
+<input type="radio" name="q13" value="c">quit</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>14 - De acordo com o código abaixo, quais registros serão mostrados:</td></tr>
+<tr><td><br><i>
+do for ITEM:<br>
+       find first ITEM.<br>
+            display it-codigo desc-item with frame a.<br>
+    end.<br><br>
+    
+    do for ITEM:<br>
+       find next ITEM.<br>
+            disp it-codigo desc-item with frame b.<br>
+    end.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q14" value="a">1 e 1</input><br>
+<input type="radio" name="q14" value="c">2</input><br>
+<input type="radio" name="q14" value="d">erro de sintaxe</input><br>
+<input type="radio" name="q14" value="b">1 e 2</input><br>
+</td>
+</tr>
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>15 - O que acontece com o seguinte código?</td></tr>
+<tr><td><br><i>
+For each item-doc-est:<br>
+        delete item-doc-est Validate(TRUE,"").<br>
+    end.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q15" value="b">Apresenta mensagem “ok/cancel”, se a resposta for “ok” elimina todos os item-doc-est, senão não elimina nenhum item-doc-est.</input><br>
+<input type="radio" name="q15" value="a">Apresenta mensagem “yes/no” e elimina apenas os item-doc-est que o usuário  determinar com “yes”.</input><br>
+<input type="radio" name="q15" value="d">Erro de sintaxe.</input><br>
+<input type="radio" name="q15" value="c">Exclui todos os item-doc-est que forem válidos (existem).</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>16 - Baseado na movimentação de dados entre o banco de dados, o record-buffer (buffer de registro) e o screen-buffer (buffer de tela), é correto afirmar que:</td></tr>
+<td>
+<input type="radio" name="q16" value="d">O comando ASSIGN move os dados o screen-buffer para o banco de dados.</input><br>
+<input type="radio" name="q16" value="b">O comando PROMPT-FOR move os dados do record-buffer para o screen-buffer.</input><br>
+<input type="radio" name="q16" value="a">O comando UPDATE move os dados do banco de dados para o record-buffer e para o screen-buffer.</input><br>
+<input type="radio" name="q16" value="c">O comando DISPLAY move os dados do record-buffer para o screen-buffer.</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>17 - Estude com atenção o código abaixo e marque a(s) alternativa(s) correta(s):</td></tr>
+<tr><td><br><i>
+DEFINE QUERY qrOrder FOR order.<br><br>
+OPEN QUERY qrOrder FOR EACH order NO-LOCK,<br>
+    EACH order-line OF order NO-LOCK.<br>
+GET FIRST qrOrder.<br>
+DO  WHILE AVAIL order:<br>
+    DISPLAY order.order-num order-line.line-num.<br>
+    GET NEXT qrOrder.<br>
+END.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q17" value="c">Todos os registros da tabela order serão lidos, porém da tabela order-line só o primeiro registro cada order será lido para.</input><br>
+<input type="radio" name="q17" value="d">O programa acusará erro e não compilará.</input><br>
+<input type="radio" name="q17" value="a">Todos os registros da tabela order serão lidos.</input><br>
+<input type="radio" name="q17" value="b">Todos os registros da tabela order-line serão lidos.</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>18 - Sabemos que o Progress possui critérios próprios para seleção de qual o melhor índice a ser utilizado. Supondo então que a tabela customer possua os seguintes índices:
+<tr><td><br><i>
+Id: cust-num<br>
+Nome: name (índice primário)<br>
+Cidade: city + cust-num<br><br>
+
+Ao ser executado o seguinte comando, qual o índice que será utilizado?<br>
+FIND FIRST customer WHERE<br>
+    Customer.city = “Joinville” AND<br>
+    String(Customer.id) = “1”.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q18" value="b">Cidade</input><br>
+<input type="radio" name="q18" value="a">Id</input><br>
+<input type="radio" name="q18" value="c">Nome</input><br>
+<input type="radio" name="q18" value="d">Nenhum</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>19 - Analisando o código abaixo, supondo que seja todo um fragmento de código de um programa, é correto afirmar que:<tr><td><br><i>
+DO ON ERROR UNDO, LEAVE:<br>
+    FIND FIRST customer EXCLUSIVE-LOCK.<br><br>
+    
+    UPDATE customer.<br>
+END.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q19" value="a">Todo o programa será uma única transação.</input><br>
+<input type="radio" name="q19" value="b">A transação se inicia no início do bloco.</input><br>
+<input type="radio" name="q19" value="d">A transação se inicia no comando UPDATE.</input><br>
+<input type="radio" name="q19" value="c">A transação se inicia no comando FIND.</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>20 - Em uma leitura de registro como abaixo:<tr><td><br><i>
+FIND customer WHERE customer.cust-num = 1.<br><br>
+
+O registro será lido com a seguinte opção de LOCK:<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q20" value="c">Sempre EXCLUSIVE-LOCK</input><br>
+<input type="radio" name="q20" value="a">Sempre NO-LOCK</input><br>
+<input type="radio" name="q20" value="b">Sempre SHARE-LOCK</input><br>
+<input type="radio" name="q20" value="d">SHARE-LOCK, a menos que seja especificado outra opção como parâmetro da sessão.</input><br>
+</td>
+</tr>
+
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>21 - No bloco de código abaixo:<tr><td><br><i>
+FOR EACH customer WHERE<br>
+    Customer.country >= “brasil” AND<br>
+    Customer.country <= “china” AND<br>
+    Customer.city >= “c” AND<br>
+    Customer.city <= “mmmmmmmmmmmmm”:<br>
+    DISPLAY customer.cust-num customer.name customer.city customer.country.<br>
+END.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q21" value="c">Apenas o campo country do índice será utilizado.</input><br>
+<input type="radio" name="q21" value="d">Apenas o campo city do índice será utilizado.</input><br>
+<input type="radio" name="q21" value="a">O índice será utilizado por inteiro.</input><br>
+<input type="radio" name="q21" value="b">O índice não será utilizado.</input><br>
+</td>
+</tr>
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>22 - Analisando o código abaixo:<tr><td><br><i>
+Código 1:<br>
+    FIND FIRST customer WHERE customer.name begins “b”.<br>
+Código 2:<br>
+    FIND FIRST customer WHERE customer.name matches “b*”.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q22" value="a">Apenas o Código 2 utilizará o índice.</input><br>
+<input type="radio" name="q22" value="c">Ambos os Códigos utilizarão o índice.</input><br>
+<input type="radio" name="q22" value="d">Nenhum dos Códigos utilizará o índice.</input><br>
+<input type="radio" name="q22" value="b">Apenas o Código 1 utilizará o índice.</input><br>
+</td>
+</tr>
+
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>23 - Com relação a opção CONTAINS, utilizada nos comandos de leitura para encontrar registros que contenham determinadas palavras, é correto afirmar que:
+</td>
+</tr>
+<tr>
+<td>
+<input type="radio" name="q23" value="c">Pode ser utilizada apenas em campos que possuem word-index.</input><br>
+<input type="radio" name="q23" value="d">Somente são consideradas palavras inteiras, não pesquisando substrings de palavras no banco.</input><br>
+<input type="radio" name="q23" value="a">Pode ser utilizada para encontrar registros baseado em qualquer campo caracter.</input><br>
+<input type="radio" name="q23" value="b">Pode ser utilizada para encontrar registros baseado em qualquer campo caracter que tenha um índice.</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>24 - Quando um comando FIND como:<tr><td><br><i>
+FIND customer WHERE customer.name begins “c” NO-ERROR.<br><br>
+encontra mais de um registro, o que acontece com os registros?<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q24" value="a">Nenhum registro é retornado.</input><br>
+<input type="radio" name="q24" value="d">Um registro qualquer é lido.</input><br>
+<input type="radio" name="q24" value="c">O último registro encontrado é retornado.</input><br>
+<input type="radio" name="q24" value="b">O primeiro registro encontrado é retornado.</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>25 - O que levou a Progress a criar o ROWID?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q25" value="b">Criar mais uma opção para leitura de registro.</input><br>
+<input type="radio" name="q25" value="c">Aumentar a segurança, uma vez que o RECID é um número inteiro e portanto mais fácil de ser gerado.</input><br>
+<input type="radio" name="q25" value="a">Corrigir bug existente no RECID.</input><br>
+<input type="radio" name="q25" value="d">Aumentar a compatibilidade com outros bancos.</input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>26 - A opção OF em leituras de tabelas múltiplas pode ser utilizada quando:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q26" value="a">Mesmo que os campos em comum tenham tipos de dados diferentes, o Progress converterá automaticamente.</input><br>
+<input type="radio" name="q26" value="d">Os campos em comum possuem o mesmo formato.</input><br>
+<input type="radio" name="q26" value="b">Os campos em comum podem aparecer em mais de um índice.</input><br>
+<input type="radio" name="q26" value="c">Os campos em comum devem obrigatoriamente estar em um índice único pelo menos em uma das duas tabelas relacionadas.</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>27 - O Comando INPUT FROM tem a função de:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q27" value="c">Abrir o arquivo para leitura e gravação.</input><br>
+<input type="radio" name="q27" value="a">Abrir o arquivo para gravação. </input><br>
+<input type="radio" name="q27" value="b">Abrir o arquivo para leitura.</input><br>
+<input type="radio" name="q27" value="d">Nenhuma das anteriores. </input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>28 - A cláusula SHARED em uma variável significa:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q28" value="b">O Programa estará definindo um objeto novo.</input><br>
+<input type="radio" name="q28" value="a">O programa receberá como parâmetro algum objeto.  </input><br>
+<input type="radio" name="q28" value="d">O programa estará acessando o conteúdo da mesma que foi estabelecido em um programa pai como NEW SHARED  </input><br>
+<input type="radio" name="q28" value="c">O Programa estará passando o conteúdo da mesma para um outro programa filho.</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>29 - As tabelas temporárias que são LIKE tabela, herdam os triggers e os dados da tabela?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q29" value="b">Não</input><br>
+<input type="radio" name="q29" value="a">Sim</input><br>
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>30 - Como é feito a Movimentação de dados no Progress?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q30" value="b">Buffer de Tela, Buffer de Registro, Base de dados</input><br>
+<input type="radio" name="q30" value="c">Base de dados, Buffer de Tela, Entrada de Dados</input><br>
+<input type="radio" name="q30" value="d">Base de dados, Buffer de Registro, Buffer de Tela, Entrada do Usuário </input><br>
+<input type="radio" name="q30" value="a">Buffer de Registro, Buffer de Tela, Base de dados, Entrada do Usuário </input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>31 - Qual a função do arquivo ".BI"?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q31" value="b">Guardar informações das transações ativas para que sejam desfeitas em caso de pane. </input><br>
+<input type="radio" name="q31" value="c">Guardar informações das transações já concluídas. </input><br>
+<input type="radio" name="q31" value="a">Guardar informações das transações ativas para refazê-las em caso de pane. </input><br>
+<input type="radio" name="q31" value="d">Nenhuma das opções anteriores.  </input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>32 - Qual a função dos Includes? </td></tr>
+<tr>
+<td>
+<input type="radio" name="q32" value="b">"Inchar" o código fonte.  </input><br>
+<input type="radio" name="q32" value="a">Reutilização de código.  </input><br>
+<input type="radio" name="q32" value="c">Nenhuma das anteriores. </input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>33 - Em que momento ocorrem os EVENTOS de um WIDGET? </td></tr>
+<tr>
+<td>
+<input type="radio" name="q33" value="b">Somente quando o usuário tirar o foco deste widget, será disparado um evento. </input><br>
+<input type="radio" name="q33" value="a">Somente quando o usuário clicar com o mouse sobre o widget.</input><br>
+<input type="radio" name="q33" value="c">A qualquer momento, desde que o usuário mexa/interaja com o mesmo. </input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>34 - A função RECID/ROWID serve para:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q34" value="a">Agilizar a leitura, mas não deixa o registro disponível.</input><br>
+<input type="radio" name="q34" value="c">Fazer uma leitura na base de dados utilizando o índice Primário/Word-index.</input><br>
+<input type="radio" name="q34" value="b">Agilizar a leitura, pois é a localização física do registro dentro da base de dados. </input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>35 - O Comando: MESSAGE "Confirma ?" UPDATE l-conf VIEW-AS ALERT-BOX QUESTION BUTTONS YES-NO-CANCEL. Serve para:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q35" value="c">Mostrar uma mensagem rapidamente e continuar sem que seja teclado algo.</input><br>
+<input type="radio" name="q35" value="a">Mostrar uma mensagem para o usuário clicar OK. </input><br>
+<input type="radio" name="q35" value="b">Mostrar uma mensagem e questionar o usuário qual será a ação que ele terá que tomar.</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>36 - Qual a função do PROPATH?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q36" value="d">Mostrar para o PROGRESS que o mesmo deverá utilizar o REGISTRY do Windows.</input><br>
+<input type="radio" name="q36" value="b">Mostrar para o PROGRESS o caminho que o mesmo deverá seguir para localizar os programas a serem executados.</input><br>
+<input type="radio" name="q36" value="c">Mostrar para o PROGRESS que o mesmo deverá utilizar o PROGRESS.INI. </input><br>
+<input type="radio" name="q36" value="a">Mostrar para o PROGRESS o caminho que o mesmo deverá seguir para localizar os componentes do Progress. </input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>37 - Qual a ferramenta do ADE que é responsável pela manutenção do Dicionário?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q37" value="d">Application Compiler</input><br>
+<input type="radio" name="q37" value="a">User Interface Builder </input><br>
+<input type="radio" name="q37" value="c">Data Dictionary</input><br>
+<input type="radio" name="q37" value="b">Data Administration</input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>38 - Qual dos comandos tem as seguintes caracteristicas: Looping, Leitura, Escopo de Frame e Escopo de Registro:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q38" value="b">Do While</input><br>
+<input type="radio" name="q38" value="a">Find </input><br>
+<input type="radio" name="q38" value="c">Repeat</input><br>
+<input type="radio" name="q38" value="d">For each</input><br>
+
+</td>
+</tr>
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>39 - Sobre temp-tables, é incorreto afirmar que:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q39" value="a">O no-lock, exclusive-lock e share-lock tem efeito significativo nas temp-tables</input><br>
+<input type="radio" name="q39" value="c">Se forem informados índices a temp-table utilizará o primeiro índice definido como índice primário</input><br>
+<input type="radio" name="q39" value="d">Temp-tables não podem ter triggers</input><br>
+<input type="radio" name="q39" value="b">As temp-tables podem usar outros campos além dos campos que a tabela apontada pelo like possui</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>40 - Qual a ferramenta para administrar a permissão de usuários, tabelas e campos no progress?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q40" value="b">Data dictionary</input><br>
+<input type="radio" name="q40" value="c">Application compiler</input><br>
+<input type="radio" name="q40" value="a">Progress explorer tool</input><br>
+<input type="radio" name="q40" value="d">Data administration</input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>41 - O comando BY utilizado em um FOR EACH serve para:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q41" value="a">Mostrar os dados na ordem do índice primário da tabela</input><br>
+<input type="radio" name="q41" value="d">Classificar os dados a serem mostrados</input><br>
+<input type="radio" name="q41" value="b">Especificar o índice que será utilizado para a leitura</input><br>
+<input type="radio" name="q41" value="c">Podemos substituir o BY por um OF</input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>42 - A opção “column-label” do comando display é utilizada para:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q42" value="c">Mostrar o label em cada linha</input><br>
+<input type="radio" name="q42" value="b">Mostrar o label ao lado do campo</input><br>
+<input type="radio" name="q42" value="a">Mostrar o label somente no topo da coluna</input><br>
+<input type="radio" name="q42" value="d">Não mostrar o label na coluna</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>43 - Cada programa de Progress que interage com o usuário segue quatro passos básicos: definição de widgets, criação da interface do usuário, habilitação dos widgets na interface e na execução do bloco. Assinalar a alternativa que melhor se enquadre na seqüência dos passos, na sua ordem:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q43" value="c">Display, enable, assign e prompt-for</input><br>
+<input type="radio" name="q43" value="a">Define, display, enable e wait-for</input><br>
+<input type="radio" name="q43" value="d">Display, form, enable e wait-for</input><br>
+<input type="radio" name="q43" value="b">Define, assign, enable e prompt-for</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>44 - A cláusula  OTHERWISE é utilizada para:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q44" value="d">No CASE, indica que caso nenhuma das opções forem atendidas, serão executados os comandos que estiverem dentro desta cláusula.</input><br>
+<input type="radio" name="q44" value="a">No IF, indica que haverá uma outra opção caso a expressão não seja verdadeira.</input><br>
+<input type="radio" name="q44" value="c">No CASE, indica que sempre executará estes comandos que estiverem dentro da cláusula.</input><br>
+<input type="radio" name="q44" value="b">No ELSE, indica que haverá uma outra opção caso a expressão não seja verdadeira.</input><br>
+
+</td>
+</tr>
+
+
+	
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>45 - Qual a ferramenta para fazer load e dump das definições da database?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q45" value="a">Progress explorer tool</input><br>
+<input type="radio" name="q45" value="d">Data administration</input><br>
+<input type="radio" name="q45" value="b">Data dictionary</input><br>
+<input type="radio" name="q45" value="c">Application compiler</input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>46 - Baseado no código abaixo assinale a alternativa correta:</td></tr>
+<tr><td><br><i>
+FOR EACH customer:<br>
+    DISP customer.<br>
+END.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q46" value="b">Os campos da tabela customer serão mostrados todos um ao lado do outro, na forma de uma tabela</input><br>
+<input type="radio" name="q46" value="c">Se não couberem todos os registros de uma vez na tela, os primeiros são imediatamente apagados para que os outros possam ser mostrados</input><br>
+<input type="radio" name="q46" value="d">Os campos serão exibidos usando a formatação definida no dicionário de dados</input><br>
+<input type="radio" name="q46" value="a">Será exibido apenas o índice primário do customer.</input><br>
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>47 - Os comandos VIEW e HIDE têm a função de:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q47" value="c">Apagar a frame e seus dados.</input><br>
+<input type="radio" name="q47" value="a">Mostrar dados em um frame e depois apagar os mesmos.</input><br>
+<input type="radio" name="q47" value="b">Mostrar a frame e depois apagá-la</input><br>
+
+
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>48 - Sobre a linha de comando citada: DEFINE TEMP-TABLE  ttCustomer LIKE customer, é correto afirmar que:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q48" value="a">A temp-table ttcustomer herdará os triggers da tabela customer</input><br>
+<input type="radio" name="q48" value="d">A temp-table  ttcustomer herdará os registros existentes na tabela customer</input><br>
+<input type="radio" name="q48" value="b">A temp-table ttcustumer herdará os campos da tabela customer</input><br>
+<input type="radio" name="q48" value="c">A temp-table ttcustomer não herdará os índices da tabela customer</input><br>
+
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>49 - O operador lógico “or” pode causar impacto de performance?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q49" value="a">Sim</input><br>
+<input type="radio" name="q49" value="b">Não</input><br>
+
+
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>50 - Para tornar um programa persistente, qual o comando utilizado?</td></tr>
+<tr>
+<td>
+<input type="radio" name="q50" value="d">Run [filename] persistent</input><br>
+<input type="radio" name="q50" value="c">Run [filename] as persistent</input><br>
+<input type="radio" name="q50" value="a">Persistent run [filename]</input><br>
+<input type="radio" name="q50" value="b">Run persistent [filename]</input><br>
+</td>
+</tr>
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>51 - São comandos de desvio de bloco:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q51" value="d">Next, Leave</input><br>
+<input type="radio" name="q51" value="c">Next, Quit</input><br>
+<input type="radio" name="q51" value="a">Next, Leave, Quit</input><br>
+<input type="radio" name="q51" value="b">Next, Break, Quit</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>52 - O que sera mostrado ao executar o programa abaixo?</td></tr>
+<tr><td><br><i>
+find customer where customer.cust-num > 1 no-error.<br>
+if available customer then do:<br>
+message "Avail" view-as alert-box.<br>
+end.<br>
+else if ambiguous customer then do:<br>
+message "Ambiguous" view-as alert-box.<br>
+end.<br>
+else message "Unknown" view-as alert-box.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q52" value="b">Ambiguous</input><br>
+<input type="radio" name="q52" value="c">Avail</input><br>
+<input type="radio" name="q52" value="d">Unknown</input><br>
+<input type="radio" name="q52" value="a">Não compila</input><br>
+
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>53 - O que o programa abaixo faz?</td></tr>
+<tr><td><br><i>
+FIND customer WHERE customer.cust-num = 1.<br>
+DEFINE STREAM s1.<br>
+OUTPUT STREAM s1 TO arquivo.txt.<br>
+OUTPUT STREAM s1 CLOSE.<br>
+PUT STREAM s1 UNFORMATTED customer.cust-num.<br>
+<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q53" value="c">Imprime 1 no arquivo.txt</input><br>
+<input type="radio" name="q53" value="d">Mostra 1 na tela.</input><br>
+<input type="radio" name="q53" value="b">Imprime e mostra 1</input><br>
+<input type="radio" name="q53" value="a">Dá erro.</input><br>
+
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>54 - São funções padrões de totalização de valores:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q54" value="a">TOTAL, MAXIMUM, MINIMUM, AVERAGE, COUNT-OF</input><br>
+<input type="radio" name="q54" value="b">TOTAL, MAXIMUM, MINIMUM, AVERAGE, FIRST-OF, LAST-OF</input><br>
+<input type="radio" name="q54" value="c">TOTAL, MAXIMUM, MINIMUM, AVERAGE, COUNT, FIRST-OF</input><br>
+<input type="radio" name="q54" value="d">TOTAL, MAXIMUM, MINIMUM, AVERAGE, COUNT</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>55 - O comando abaixo executa tranquilamente?</td></tr>
+<tr><td><br><i>for each customer:<br>
+display customer.cust-num<br>
+"Verdade" WHEN 1 = 1.<br>
+end.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q55" value="a">Sim</input><br>
+<input type="radio" name="q55" value="b">Não</input><br>
+
+
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>56 - Qual a saída do programa abaixo?</td></tr>
+<tr><td><br><i>
+DEFINE TEMP-TABLE tt-customer LIKE customer.<br>
+FIND FIRST tt-customer.<br>
+MESSAGE tt-customer.name view-as alert-box.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q56" value="a">Não acontece nada.</input><br>
+<input type="radio" name="q56" value="b">Mostra o nome do primeiro cliente do banco de dados</input><br>
+<input type="radio" name="q56" value="c">Erro na execução do FIND, pois tabelas temporárias não copiam os dados</input><br>
+
+
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>57 - Qual a saída do programa abaixo?</td></tr>
+<tr><td><br><i>
+DEFINE TEMP-TABLE tt-customer LIKE customer.<br>
+FIND FIRST tt-customer NO-ERROR.<br>
+MESSAGE tt-customer.name view-as alert-box.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q57" value="a">Não acontece nada.</input><br>
+<input type="radio" name="q57" value="b">Mostra o nome do primeiro cliente do banco de dados</input><br>
+<input type="radio" name="q57" value="c">Erro na execução do FIND, pois tabelas temporárias não copiam os dados</input><br>
+<input type="radio" name="q57" value="d">Erro na execução do MESSAGE, pois o registro não está disponivel</input><br>
+</td>
+</tr>
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>58 - Qual a saída do programa abaixo?</td></tr>
+<tr><td><br><i>OUTPUT TO c:\arquivo.p.<br>
+DISPLAY "message 'hi' view-as alert-box.".<br>
+OUTPUT TO SCREEN.<br>
+compile c:\arquivo.p SAVE INTO "c:\".<br>
+run c:\arquivo.r.<br>
+message 'hello' view-as alert-box.<br><br></i>
+</td></tr>
+<tr>
+<td>
+<input type="radio" name="q58" value="a">Erro na execução.</input><br>
+<input type="radio" name="q58" value="b">Mostra hello, e depois hi.</input><br>
+<input type="radio" name="q58" value="c">Mostra hello.</input><br>
+<input type="radio" name="q58" value="d">Mostra hi, e depois hello.</input><br>
+</td>
+</tr>
+
+
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>59 - Sobre transações, é correto afirmar que:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q59" value="d">Ou se grava todas as informações no banco, ou nenhuma (ao menos que esteja com NO-UNDO).</input><br>
+<input type="radio" name="q59" value="c">É uma unidade completa de depuração.</input><br>
+<input type="radio" name="q59" value="a">Somente é aberta através do bloco DO TRANSACTION.</input><br>
+<input type="radio" name="q59" value="b">Ela gera um arquivo ".BI", para caso não ocorrer nenhum erro efetuar o write no banco.</input><br>
+
+</td>
+</tr>
+
+
+<tr><td><br><br></td></tr>
+<tr><td><hr><br><b>60 - Sobre dead-lock, é correto afirmar que:</td></tr>
+<tr>
+<td>
+<input type="radio" name="q60" value="d">Ocorre quando há falha de conexão ao se conectar.</input><br>
+<input type="radio" name="q60" value="c">Ocorre devido a dois usuários com SHARED-LOCK tentando mudar o status para EXCLUSIVE-LOCK ao mesmo tempo.</input><br>
+<input type="radio" name="q60" value="a">Quando se tenta modificar um registro usando o status NO-LOCK.</input><br>
+<input type="radio" name="q60" value="b">Não existe.</input><br>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td>
+<script>
+var respostas = ["c", "b", "b", "c", "a", "b", "b", "b", "b", "a", 
+				 "b", "b", "b", "a", "c", "c", "d", "c", "b", "d",
+				 "c", "b", "c", "a", "d", "c", "b", "d", "b", "d", 
+				 "b", "a", "c", "b", "b", "b", "c", "d", "a", "d",
+				 "d", "a", "a", "d", "d", "d", "b", "b", "a", "d",
+				 "d", "b", "a", "d", "a", "c", "d", "d", "d", "c"];
+</script>
+
+<center><br><input type="button" value="Já terminei, enviar!" onclick="javascript:darNota();"><br><br><div id="nota"></div></center>
+</td>
+</tr>
+</table>
+</font>
+
+</html>

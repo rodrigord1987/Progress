@@ -1,0 +1,80 @@
+======================================================================
+[14/11/17@15:26:39.578+0000] P-005000 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/17@15:26:39.579+0000] P-005000 T-main 1 --- --- Logging level set to = 2
+[14/11/17@15:26:39.579+0000] P-005000 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/17@15:26:39.596+0000] P-005000 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/17@15:26:39.596+0000] P-005000 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/17@17:13:32.112+0000] P-004728 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/17@17:13:32.113+0000] P-004728 T-main 1 --- --- Logging level set to = 2
+[14/11/17@17:13:32.113+0000] P-004728 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/17@17:13:32.137+0000] P-004728 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/17@17:13:32.137+0000] P-004728 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/18@10:19:04.926+0000] P-005060 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/18@10:19:04.927+0000] P-005060 T-main 1 --- --- Logging level set to = 2
+[14/11/18@10:19:04.927+0000] P-005060 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/18@10:19:04.949+0000] P-005060 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/18@10:19:04.950+0000] P-005060 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/18@13:38:50.550-0200] P-003940 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/18@13:38:50.553-0200] P-003940 T-main 1 --- --- Logging level set to = 2
+[14/11/18@13:38:50.553-0200] P-003940 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/18@13:38:50.571-0200] P-003940 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/18@13:38:50.571-0200] P-003940 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/18@15:25:53.584-0200] P-003872 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/18@15:25:53.586-0200] P-003872 T-main 1 --- --- Logging level set to = 2
+[14/11/18@15:25:53.586-0200] P-003872 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/18@15:25:53.595-0200] P-003872 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/18@15:25:53.595-0200] P-003872 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/18@18:45:00.583+0000] P-003752 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/18@18:45:00.584+0000] P-003752 T-main 1 --- --- Logging level set to = 2
+[14/11/18@18:45:00.584+0000] P-003752 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/18@18:45:00.594+0000] P-003752 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/18@18:45:00.594+0000] P-003752 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/19@10:37:30.592+0000] P-003460 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/19@10:37:30.593+0000] P-003460 T-main 1 --- --- Logging level set to = 2
+[14/11/19@10:37:30.593+0000] P-003460 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/19@10:37:30.603+0000] P-003460 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/19@10:37:30.603+0000] P-003460 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/11/24@08:05:29.358-0200] P-004336 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/11/24@08:05:29.360-0200] P-004336 T-main 1 --- --- Logging level set to = 2
+[14/11/24@08:05:29.360-0200] P-004336 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/11/24@08:05:30.956-0200] P-004336 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/11/24@08:05:30.956-0200] P-004336 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+[14/11/24@08:06:12.505-0200] P-004336 T-main 1 NS NSPlumbing An error occurred while attempting an RMI lookup of the AdminServer: rmi://JVD003006:20931/Chimera. (11025)
+======================================================================
+[14/12/01@10:03:09.734+0000] P-002000 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/12/01@10:03:09.735+0000] P-002000 T-main 1 --- --- Logging level set to = 2
+[14/12/01@10:03:09.735+0000] P-002000 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/12/01@10:03:09.798+0000] P-002000 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/12/01@10:03:09.798+0000] P-002000 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/12/01@10:07:52.753-0200] P-003996 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/12/01@10:07:52.754-0200] P-003996 T-main 1 --- --- Logging level set to = 2
+[14/12/01@10:07:52.755-0200] P-003996 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/12/01@10:07:52.769-0200] P-003996 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/12/01@10:07:52.770-0200] P-003996 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/12/02@17:03:20.777-0200] P-005788 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/12/02@17:03:20.779-0200] P-005788 T-main 1 --- --- Logging level set to = 2
+[14/12/02@17:03:20.779-0200] P-005788 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/12/02@17:03:20.797-0200] P-005788 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/12/02@17:03:20.797-0200] P-005788 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+[14/12/02@17:04:01.959-0200] P-005788 T-main 1 NS NSPlumbing An error occurred while attempting an RMI lookup of the AdminServer: rmi://JVD003006:20931/Chimera. (11025)
+======================================================================
+[14/12/03@08:04:41.874-0200] P-005896 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/12/03@08:04:41.875-0200] P-005896 T-main 1 --- --- Logging level set to = 2
+[14/12/03@08:04:41.875-0200] P-005896 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/12/03@08:04:41.884-0200] P-005896 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/12/03@08:04:41.884-0200] P-005896 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)
+======================================================================
+[14/12/04@13:55:10.021-0200] P-004256 T-main 1 --- --- C:\temp\NS1.ns.log opened.
+[14/12/04@13:55:10.022-0200] P-004256 T-main 1 --- --- Logging level set to = 2
+[14/12/04@13:55:10.022-0200] P-004256 T-main 1 --- --- Log entry types activated: NSPlumbing,
+[14/12/04@13:55:10.041-0200] P-004256 T-main 2 NS NSPlumbing Starting NameServer NS1 rmi://JVD003006:20931/NS1 Port = 5162 TimeOut = 30. (8196)
+[14/12/04@13:55:10.041-0200] P-004256 T-main 2 NS NSPlumbing Load Balancing Disabled For NameServer NS1. (8200)

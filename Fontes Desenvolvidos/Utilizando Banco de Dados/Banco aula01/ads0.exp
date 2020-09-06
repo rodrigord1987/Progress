@@ -1,0 +1,864 @@
+
+
+====== Start exception logging == "ads0.exp" opened == Mon Nov 17 13:25:44 BRST 2014 ======
+
+
+**** 1 ****
+
+   Exception at Mon Nov 17 13:25:44 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 2 ****
+
+   Exception at Mon Nov 17 13:25:44 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 3 ****
+
+   Exception at Mon Nov 17 13:25:44 BRST 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:82)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+
+
+====== Start exception logging == "ads0.exp" opened == Mon Nov 17 15:12:47 BRST 2014 ======
+
+
+**** 4 ****
+
+   Exception at Mon Nov 17 15:12:47 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 5 ****
+
+   Exception at Mon Nov 17 15:12:47 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 6 ****
+
+   Exception at Mon Nov 17 15:12:47 BRST 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:82)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+
+
+====== Start exception logging == "ads0.exp" opened == Tue Nov 18 08:18:20 BRST 2014 ======
+
+
+**** 7 ****
+
+   Exception at Tue Nov 18 08:18:20 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 8 ****
+
+   Exception at Tue Nov 18 08:18:20 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 9 ****
+
+   Exception at Tue Nov 18 08:18:20 BRST 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:82)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+
+
+====== Start exception logging == "ads0.exp" opened == Mon Nov 24 10:04:23 GMT 2014 ======
+
+
+**** 10 ****
+
+   Exception at Mon Nov 24 10:04:23 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 11 ****
+
+   Exception at Mon Nov 24 10:04:23 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 12 ****
+
+   Exception at Mon Nov 24 10:04:23 GMT 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:78)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+
+
+====== Start exception logging == "ads0.exp" opened == Mon Dec 01 12:52:34 GMT 2014 ======
+
+
+**** 13 ****
+
+   Exception at Mon Dec 01 12:52:34 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 14 ****
+
+   Exception at Mon Dec 01 12:52:34 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 15 ****
+
+   Exception at Mon Dec 01 12:52:34 GMT 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:78)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+
+
+====== Start exception logging == "ads0.exp" opened == Mon Dec 01 15:04:04 GMT 2014 ======
+
+
+**** 16 ****
+
+   Exception at Mon Dec 01 15:04:04 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 17 ****
+
+   Exception at Mon Dec 01 15:04:04 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 18 ****
+
+   Exception at Mon Dec 01 15:04:04 GMT 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:78)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+
+
+====== Start exception logging == "ads0.exp" opened == Wed Dec 03 10:03:34 GMT 2014 ======
+
+
+**** 19 ****
+
+   Exception at Wed Dec 03 10:03:34 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 20 ****
+
+   Exception at Wed Dec 03 10:03:34 GMT 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Port already in use: 20931; nested exception is: 
+	java.net.BindException: Address already in use: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:243)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:178)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:145)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:164)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:188)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:73)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+Caused by: java.net.BindException: Address already in use: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:331)
+	at java.net.ServerSocket.bind(ServerSocket.java:318)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:615)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:231)
+	... 20 more
+
+**** 21 ****
+
+   Exception at Wed Dec 03 10:03:34 GMT 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:78)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:658)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:326)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:74)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:348)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:74)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:88)
+
+
+====== Start exception logging == "ads0.exp" opened == Sun Dec 07 16:11:54 BRST 2014 ======
+
+
+**** 22 ****
+
+   Exception at Sun Dec 07 16:11:54 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Failed to start RMI registry thread
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 23 ****
+
+   Exception at Sun Dec 07 16:11:54 BRST 2014: java.rmi.server.ExportException
+   Message (throw): RegistryManager: Could not start RMI Registry
+   Message (excp):  Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+   Stack Trace:
+java.rmi.server.ExportException: Listen failed on port: 20931; nested exception is: 
+	java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:251)
+	at sun.rmi.transport.tcp.TCPTransport.exportObject(TCPTransport.java:184)
+	at sun.rmi.transport.tcp.TCPEndpoint.exportObject(TCPEndpoint.java:382)
+	at sun.rmi.transport.LiveRef.exportObject(LiveRef.java:116)
+	at sun.rmi.server.UnicastServerRef.exportObject(UnicastServerRef.java:180)
+	at sun.rmi.registry.RegistryImpl.setup(RegistryImpl.java:92)
+	at sun.rmi.registry.RegistryImpl.<init>(RegistryImpl.java:78)
+	at java.rmi.registry.LocateRegistry.createRegistry(LocateRegistry.java:186)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.startRMIRegistry(PrimaryRegistryManager.java:192)
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:77)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
+Caused by: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:359)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:97)
+	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createServerSocket(RMIDirectSocketFactory.java:27)
+	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createServerSocket(RMIMasterSocketFactory.java:333)
+	at sun.rmi.transport.tcp.TCPEndpoint.newServerSocket(TCPEndpoint.java:622)
+	at sun.rmi.transport.tcp.TCPTransport.listen(TCPTransport.java:237)
+	... 20 more
+
+**** 24 ****
+
+   Exception at Sun Dec 07 16:11:54 BRST 2014: java.lang.Exception
+   Message (throw): Failed to register admin server.
+   Message (excp):  Could not start RMI Registry
+   Stack Trace:
+java.lang.Exception: Could not start RMI Registry
+	at com.progress.common.rmiregistry.PrimaryRegistryManager.register(PrimaryRegistryManager.java:82)
+	at com.progress.chimera.adminserver.AdminServer.setupRMI(AdminServer.java:688)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:356)
+	at com.progress.chimera.adminserver.AdminServer.<init>(AdminServer.java:166)
+	at com.progress.chimera.adminserver.NTAdminServer.<init>(NTAdminServer.java:81)
+	at com.progress.chimera.adminserver.NTAdminServer.main(NTAdminServer.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at com.progress.chimera.adminserver.AdminServerStarter.<init>(AdminServerStarter.java:75)
+	at com.progress.chimera.adminserver.AdminServerStarter.main(AdminServerStarter.java:89)
